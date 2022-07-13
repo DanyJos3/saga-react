@@ -5,12 +5,12 @@ import {
     ButtonOr,
   } from "semantic-ui-react";
 
-function ButtonSaveOrCancel() {
+function ButtonSaveOrCancel({addEntry}) {
   return (
     <ButtonGroup style={{ marginTop: 20 }}>
       <Button> Cancel </Button>
       <ButtonOr />
-      <Button primary> Ok </Button>
+      <Button primary onClick={()=>addEntry()}> Ok </Button>
     </ButtonGroup> 
   );
 }
